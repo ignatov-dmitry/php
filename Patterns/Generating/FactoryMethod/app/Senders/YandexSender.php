@@ -4,7 +4,7 @@
 namespace App\Senders;
 
 
-use App\Connectors\Interfaces\MailServerConnector;
+use App\Connectors\Interfaces\IMailServerConnector;
 use App\Connectors\YandexConnector;
 use App\Senders\Abstracts\MailSender;
 
@@ -20,7 +20,7 @@ class YandexSender extends MailSender
         $this->password = $password;
     }
 
-    public function getMailServer(): MailServerConnector
+    public function getMailServer(): IMailServerConnector
     {
         return new YandexConnector($this->login, $this->password);
     }

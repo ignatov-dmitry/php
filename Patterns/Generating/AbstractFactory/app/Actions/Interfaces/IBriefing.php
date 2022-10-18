@@ -4,7 +4,7 @@
 namespace App\Actions\Interfaces;
 
 
-interface Briefing
+interface IBriefing
 {
     public function getBriefing(string $date): string;
 }

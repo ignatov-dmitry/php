@@ -3,28 +3,28 @@
 
 namespace App\Characters;
 
-use App\Actions\Interfaces\Briefing;
-use App\Actions\Interfaces\Movement;
-use App\Actions\Interfaces\Weapon;
-use App\Characters\Interfaces\CharacterFactory;
+use App\Actions\Interfaces\IBriefing;
+use App\Actions\Interfaces\IMovement;
+use App\Actions\Interfaces\IWeapon;
+use App\Characters\Interfaces\ICharacterFactory;
 use App\Actions\Offensive;
 use App\Actions\HIMARS;
 use App\Actions\SecretData;
 
-class VSUCharacter implements CharacterFactory
+class VSUCharacter implements ICharacterFactory
 {
 
-    public function createRun(): Movement
+    public function createRun(): IMovement
     {
         return new Offensive();
     }
 
-    public function createWeapon(): Weapon
+    public function createWeapon(): IWeapon
     {
         return new HIMARS();
     }
 
-    public function createBriefing(): Briefing
+    public function createBriefing(): IBriefing
     {
         return new SecretData();
     }

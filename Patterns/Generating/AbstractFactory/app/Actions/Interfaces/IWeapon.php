@@ -4,7 +4,7 @@
 namespace App\Actions\Interfaces;
 
 
-interface Weapon
+interface IWeapon
 {
     public function hit(): string;
 }

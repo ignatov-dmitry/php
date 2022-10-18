@@ -1,20 +1,20 @@
 <?php
 namespace App;
 
-use App\Actions\Interfaces\Briefing;
-use App\Actions\Interfaces\Movement;
-use App\Actions\Interfaces\Weapon;
-use App\Characters\Interfaces\CharacterFactory;
+use App\Actions\Interfaces\IBriefing;
+use App\Actions\Interfaces\IMovement;
+use App\Actions\Interfaces\IWeapon;
+use App\Characters\Interfaces\ICharacterFactory;
 
 class Character
 {
-    private Weapon $weapon;
+    private IWeapon $weapon;
 
-    private Movement $move;
+    private IMovement $move;
 
-    private Briefing $briefing;
+    private IBriefing $briefing;
 
-    public function __construct(CharacterFactory $characterFactory)
+    public function __construct(ICharacterFactory $characterFactory)
     {
         $this->move = $characterFactory->createRun();
         $this->weapon = $characterFactory->createWeapon();

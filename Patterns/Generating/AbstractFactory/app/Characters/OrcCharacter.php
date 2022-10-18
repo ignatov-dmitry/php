@@ -3,28 +3,28 @@
 
 namespace App\Characters;
 
-use App\Actions\Interfaces\Briefing;
-use App\Actions\Interfaces\Movement;
-use App\Actions\Interfaces\Weapon;
-use App\Characters\Interfaces\CharacterFactory;
+use App\Actions\Interfaces\IBriefing;
+use App\Actions\Interfaces\IMovement;
+use App\Actions\Interfaces\IWeapon;
+use App\Characters\Interfaces\ICharacterFactory;
 use App\Actions\GoodWill;
 use App\Actions\Hand;
 use App\Actions\NoLosses;
 
-class OrcCharacter implements CharacterFactory
+class OrcCharacter implements ICharacterFactory
 {
 
-    public function createRun(): Movement
+    public function createRun(): IMovement
     {
         return new Goodwill();
     }
 
-    public function createWeapon(): Weapon
+    public function createWeapon(): IWeapon
     {
         return new Hand();
     }
 
-    public function createBriefing(): Briefing
+    public function createBriefing(): IBriefing
     {
         return new NoLosses();
     }

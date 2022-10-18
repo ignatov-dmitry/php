@@ -4,9 +4,9 @@
 namespace App\Connectors;
 
 
-use App\Connectors\Interfaces\MailServerConnector;
+use App\Connectors\Interfaces\IMailServerConnector;
 
-class GmailConnector implements MailServerConnector
+class GmailConnector implements IMailServerConnector
 {
     private string $login ;
 

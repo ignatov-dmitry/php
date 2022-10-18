@@ -5,7 +5,7 @@ namespace App\Senders;
 
 
 use App\Connectors\GmailConnector;
-use App\Connectors\Interfaces\MailServerConnector;
+use App\Connectors\Interfaces\IMailServerConnector;
 use App\Senders\Abstracts\MailSender;
 
 class GmailSender extends MailSender
@@ -20,7 +20,7 @@ class GmailSender extends MailSender
         $this->password = $password;
     }
 
-    public function getMailServer(): MailServerConnector
+    public function getMailServer(): IMailServerConnector
     {
         return new GmailConnector($this->login, $this->password);
     }

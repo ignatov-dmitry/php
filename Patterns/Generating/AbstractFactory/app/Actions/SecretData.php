@@ -3,9 +3,9 @@
 
 namespace App\Actions;
 
-use App\Actions\Interfaces\Briefing;
+use App\Actions\Interfaces\IBriefing;
 
-class SecretData implements Briefing
+class SecretData implements IBriefing
 {
 
     public function getBriefing(string $date): string

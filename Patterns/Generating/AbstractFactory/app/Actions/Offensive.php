@@ -3,9 +3,9 @@
 
 namespace App\Actions;
 
-use App\Actions\Interfaces\Movement;
+use App\Actions\Interfaces\IMovement;
 
-class Offensive implements Movement
+class Offensive implements IMovement
 {
 
     public function move(): string

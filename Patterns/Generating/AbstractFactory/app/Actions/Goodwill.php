@@ -3,9 +3,9 @@
 
 namespace App\Actions;
 
-use App\Actions\Interfaces\Movement;
+use App\Actions\Interfaces\IMovement;
 
-class Goodwill implements Movement
+class Goodwill implements IMovement
 {
 
     public function move(): string

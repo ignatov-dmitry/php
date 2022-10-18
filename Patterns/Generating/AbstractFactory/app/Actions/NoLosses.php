@@ -3,9 +3,9 @@
 
 namespace App\Actions;
 
-use App\Actions\Interfaces\Briefing;
+use App\Actions\Interfaces\IBriefing;
 
-class NoLosses implements Briefing
+class NoLosses implements IBriefing
 {
 
     public function getBriefing(string $date): string

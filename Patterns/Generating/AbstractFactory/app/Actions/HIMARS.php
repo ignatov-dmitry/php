@@ -3,9 +3,9 @@
 
 namespace App\Actions;
 
-use App\Actions\Interfaces\Weapon;
+use App\Actions\Interfaces\IWeapon;
 
-class HIMARS implements Weapon
+class HIMARS implements IWeapon
 {
 
     public function hit(): string

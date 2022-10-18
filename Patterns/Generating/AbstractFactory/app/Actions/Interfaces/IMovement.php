@@ -4,7 +4,7 @@
 namespace App\Actions\Interfaces;
 
 
-interface Movement
+interface IMovement
 {
     public function move(): string;
 }

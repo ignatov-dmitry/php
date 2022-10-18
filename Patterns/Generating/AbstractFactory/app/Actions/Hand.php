@@ -3,9 +3,9 @@
 
 namespace App\Actions;
 
-use App\Actions\Interfaces\Weapon;
+use App\Actions\Interfaces\IWeapon;
 
-class Hand implements Weapon
+class Hand implements IWeapon
 {
 
     public function hit(): string

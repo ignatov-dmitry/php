@@ -4,7 +4,7 @@
 namespace App\Connectors\Interfaces;
 
 
-interface MailServerConnector
+interface IMailServerConnector
 {
     public function connect(): void;
 

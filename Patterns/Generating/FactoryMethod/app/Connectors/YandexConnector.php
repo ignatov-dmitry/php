@@ -4,9 +4,9 @@
 namespace App\Connectors;
 
 
-use App\Connectors\Interfaces\MailServerConnector;
+use App\Connectors\Interfaces\IMailServerConnector;
 
-class YandexConnector implements MailServerConnector
+class YandexConnector implements IMailServerConnector
 {
     private string $login ;
 
